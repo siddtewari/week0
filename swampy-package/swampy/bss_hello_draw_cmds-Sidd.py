@@ -24,13 +24,7 @@ def retrace(turtle,n):
  trnArd(turtle)
  fd(turtle,n)
 
-def detachL(turtle,n):
- pu(turtle)
- lt(turtle)
- fd(turtle,n)
- pd(turtle)
-
-def detachW(turtle,n):
+def detach(turtle,n):
  pu(turtle)
  lt(turtle)
  fd(turtle,n)
@@ -44,7 +38,7 @@ def drawH():
  fd(bob,10)
  trnArd(bob)
  fd(bob,20)
- detachL(bob,10)
+ detach(bob,10)
 
 def drawE():
  ltFd(bob,20)
@@ -56,14 +50,14 @@ def drawE():
  ltFd(bob,10)
  ltFd(bob,10)
  rt(bob)
- detachL(bob,10)
+ detach(bob,10)
 
 def drawL():
  ltFd(bob,20)
  retrace(bob,20)
  ltFd(bob,14)
  rt(bob)
- detachL(bob,10)
+ detach(bob,10)
 
 def drawO():
  ltFd(bob,20)
@@ -72,7 +66,7 @@ def drawO():
  rtFd(bob,12)
  retrace(bob,12)
  rt(bob)
- detachL(bob,20)
+ detach(bob,20)
  
 drawH()
 drawE()
