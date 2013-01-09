@@ -1,36 +1,28 @@
 # Polygon excercise from Week 0
 
-# Name:
+# Name: Sidd Tewari
 
-
+import math
 from TurtleWorld import * 
-
 world = TurtleWorld()			
 lee = Turtle()				
 print lee
 
-# This is where you put code to move bob or lee :)
-
 def polygon(Turtle,len,n):
-	# to keep turtle's drawing in view for larger polygons
-	# pu(Turtle) 
-	# rt(Turtle)
-	# fd(Turtle,100)
-	# pd(Turtle)
 	angle = 360.0/n
 	for i in range(n):
 		fd(Turtle,len)
 		lt(Turtle,angle)
 
-polygon(lee,50,5)
-
-
-
-
-
-
-
-
-
-
+def circle(t,r):
+	world.clear()
+	pi = math.pi
+	circum = 2*pi*r
+	length = r/5 		        # hard coded approximation for length
+	sides = int(circum/length)  # circum == length * sides
+	polygon(lee,length,sides)
+	
+circle(lee,23)
+circle(lee,50)
+cirle(lee,500)
 wait_for_user()					
