@@ -11,12 +11,18 @@ print lee
 
 # This is where you put code to move bob or lee :)
 
-def square(Turtle,n):
-	for i in range(4):
-		fd(Turtle,n)
-		lt(Turtle)
+def polygon(Turtle,len,n):
+	# to keep turtle's drawing in view for larger polygons
+	# pu(Turtle) 
+	# rt(Turtle)
+	# fd(Turtle,100)
+	# pd(Turtle)
+	angle = 360.0/n
+	for i in range(n):
+		fd(Turtle,len)
+		lt(Turtle,angle)
 
-square(lee,150)
+polygon(lee,50,5)
 
 
 
