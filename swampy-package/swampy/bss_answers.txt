@@ -1,8 +1,5 @@
 # Text answers from Week 0
-
-# Name:
-
-
+# Name: Sidd Tewari
 
 Explain what each of the following lines does. Use the terminology you learned from the book (or Google)
 	
@@ -12,16 +9,16 @@ Explain what each of the following lines does. Use the terminology you learned f
 	wait_for_user()
 
 Answer:
-
-
-
-
+1 -> imports everything from the TurtleWorld module; modules are on the PYTHONPATH
+2 -> create an instance of the TurtleWorld object and assigns it to world
+3 -> create an instance of Turtle object and assigns it to bob
+4 -> wait_for_user() tells TurtleWorld to wait for a the user to do something
 
 
 These questions pertain to the program you wrote in Week0.
 
 -- What are the arguments of polygon()?  What type is each argument?
-Answer:
+Answer: Turtle, length, sides are the three arguments of polygon(). 
 
 -- What two turtle functions did you use to draw the sides of the polygon?
 Answer:
