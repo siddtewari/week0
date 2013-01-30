@@ -10,6 +10,8 @@ lee = Turtle()
 lee.delay = 0.01
 print lee
 
+from bss_polygon import *
+
 def arc(Turtle,radius,theta):
 	length, sides = circularCalculations(Turtle,radius)
 	angle = theta/sides
