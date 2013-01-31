@@ -21,22 +21,20 @@ These questions pertain to the program you wrote in Week0.
 Answer: Turtle, length, sides are the three arguments of polygon(). 
 
 -- What two turtle functions did you use to draw the sides of the polygon?
-Answer:
+Answer: fd to move forward and lt to turn left. In addition, pd got used automatically.
 
 -- What are the arguments for polyline?  What type is each argument?
-Answer:
-
-
+Answer: Polyline is equivalent to my draw() function. This function takes four arguments - t, angle, sides, length - turtle, the angle it turns, the number of sides it draws and the length of each side. 
 
 
 
 Suppose you wrote a function, center_circle(), that draws a circle of a given radius around the current location of the turtle and restores the turtle to its starting point.
 
 -- What turtle functions would you use to move the turtle from the center to the edge of the circle and get ready to call the original circle() function?
-Answer:
+Answer: pu & fd
 
 -- Suppose the interface of this function requires the turtle to end up in the same place it started, facing in the same direction it started.
-Answer:
+Answer: pu & bk & rt
 
 -- What is this type of requirement called?
-Answer:
+Answer: postcondition

@@ -1,38 +1,69 @@
 # Flower excercise (4.2) from Week 0
 # Name: Sidd Tewari
 
-import math
-
 from TurtleWorld import * 		
-world = TurtleWorld()		
-world.clear()	
-lee = Turtle()				
-lee.delay = 0.01
-print lee
-
 from bss_polygon import *
 
-def arc(Turtle,radius,theta):
-	length, sides = circularCalculations(Turtle,radius)
-	angle = theta/sides
-	draw(Turtle,length,sides,angle)
+def petal(t,r,angle):
+	"""Draws a petal using two arcs
 
-def circularCalculations(Turtle,radius):
-	pi = math.pi
-	circum = 2*pi*radius
-	length = radius/5		    # hard-coded approximation 
-	sides = int(circum/length)  # circum == length * sides
-	return (length,sides)
-
-def draw(Turtle,length,sides,angle):
-	for i in range(sides):
-		fd(Turtle,length)
-		lt(Turtle,angle)
-
-def flower(Turtle,length,theta):
+	t: TurtleWorld
+	r: radius
+	angle: angle (degrees) that subtends the arcs
+	"""
 	for i in range(2):
-		arc(lee,50,100)
-		lt(lee,	)
+		arc(t, r, angle)
+		lt(t, 180-angle)
 
-wait_for_user()					
+def flower(t,n,r,angle):
+	"""Draws a flower with n petals.
 
+	t: Turtle
+	n: number of petals
+	r: radius of the arcs
+	angle: angle (degrees) that subtends the arcs
+	"""
+	for i in range(n):
+		petal(t,r,angle)
+		lt(t, 360.0/n)
+
+def move(t,length):
+	"""Move Turtle(t) forward (length) units without leaving a trace. 
+	Leaves the pen down after moving.
+	"""
+	pu(t)
+	fd(t, length)
+	pd(t)
+
+
+world = TurtleWorld()
+lee = Turtle()
+lee.delay = 0.0001
+
+#petal(lee, 60, 60.0)
+
+move(lee,-100)
+flower(lee, 7, 6.0, 60.0)
+
+move(lee,100)
+flower(lee, 10, 4.0, 80.0)
+
+move(lee,180)
+flower(lee, 20, 14.0, 20.0)
+
+die(lee)
+
+#dump the contents of the campus to the file canvas.eps
+world.canvas.dump()
+
+wait_for_user()			
+
+
+# if __name__ == '__main__':
+# 	world = TurtleWorld()
+# 	bob = Turtle()
+# 	bob.delay = 0.01
+
+# 	petal (bob, 100, 15)
+
+# 	wait_for_user()					
